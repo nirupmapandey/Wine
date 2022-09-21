@@ -18,5 +18,14 @@ jobs:
           pip install -r requirement.txt
           python train.py
           
-          echo "Model Matrics"
-          cat matrics.txt
+          echo "##Model Matrics" > report.md
+          cat matrics.txt >> report.md
+          
+          echo "## Data Viz" >> report.md
+          
+          cml publish feature_importance.png --md >> report.md
+          cml publish residuals.png --md >> report.md
+          
+          cml-send-comment report.md
+          
+          
