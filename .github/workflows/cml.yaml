@@ -1,0 +1,25 @@
+name: CML test 1
+# Controls when the workflow will run
+on: [push]
+jobs:
+     runs-on: ubuntu-latest
+     steps:
+
+      - run: 
+          #pip install -r requirements.txt
+          #python train.py
+          
+          echo "##Model Matrics" 
+          #cat matrics.txt
+          
+          #echo "##Model Matrics" > report.md
+          #cat matrics.txt >> report.md
+          
+          #echo "## Data Viz" >> report.md
+          
+          #cml publish feature_importance.png --md >> report.md
+          #cml publish residuals.png --md >> report.md
+          
+          #cml-send-comment report.md
+          
+          
