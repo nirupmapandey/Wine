@@ -1,21 +1,13 @@
-
 name: CML test 1
-
 # Controls when the workflow will run
 on: [push]
-
 jobs:
      runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+     steps:
       - uses: actions/checkout@v3
-
-      # Runs a set of commands using the runners shell
       - name: Model building
         run: |
-          pip install -r requirement.txt
+          pip install -r requirements.txt
           python train.py
           
           echo "##Model Matrics" > report.md
