@@ -4,14 +4,13 @@ on: [push]
 jobs:
      runs-on: ubuntu-latest
      steps:
-      - uses: actions/checkout@v3
-      - name: Model building
-      - run: |
+
+      - run: 
           #pip install -r requirements.txt
           #python train.py
           
           echo "##Model Matrics" 
-          cat matrics.txt
+          #cat matrics.txt
           
           #echo "##Model Matrics" > report.md
           #cat matrics.txt >> report.md
